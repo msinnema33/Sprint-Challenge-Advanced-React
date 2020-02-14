@@ -2,24 +2,40 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Navigation from './Navigation';
 
-test('Navigation  is rendering properly', () => {
-    const { getByLabelText } = render(<Navigation/>);
-    getByLabelText(/first name/i);
-    getByLabelText(/last name/i);
-    getByLabelText(/email/i);
-    getByLabelText(/message/i);
-});
 
-test('add a new user', () =>{
-    const { getByLabelText, getByText } = render(<ContactForm/>);
+test('h1 is displaying properly', () => {
+    const { getbyTestId } = render(<Navigation/>);
+    getbyTestId('nav-h1');
 
-    const firstNameInput = getByLabelText(/first Name/i);
+    expect(
+        queryByTestId(document.documentElement, 'nav-h1'),
+      ).toBeInTheDocument()
+  });
+
+
+
+
+
+
+
+// test('Navigation  is rendering properly', () => {
+//     const { getByLabelText } = render(<Navigation/>);
+//     getByLabelText(/first name/i);
+//     getByLabelText(/last name/i);
+//     getByLabelText(/email/i);
+//     getByLabelText(/message/i);
+// });
+
+// test('add a new user', () =>{
+//     const { getByLabelText, getByText } = render(<ContactForm/>);
+
+//     const firstNameInput = getByLabelText(/first Name/i);
 
     
-    fireEvent.change(firstNameInput, {target: {value: "testing"}});
+//     fireEvent.change(firstNameInput, {target: {value: "testing"}});
 
     
-    expect(firstNameInput.value).toBe("testing");
+//     expect(firstNameInput.value).toBe("testing");
 
     // getByText(/submit/i);
-})
+// })

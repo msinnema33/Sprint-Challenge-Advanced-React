@@ -40,7 +40,7 @@ class App extends React.Component {
                 <header className='header'>
                   <Navigation />
                 </header>
-                  <h1>Mike's World Cup Sprint</h1>
+                  <h1 data-testid='app-h1'>Mike's World Cup Sprint</h1>
 
                     <div className='players'>
 

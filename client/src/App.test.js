@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render,  } from '@testing-library/react';
+import { render, getbyTestId  } from '@testing-library/react';
 import App from './App';
 
 it('renders without crashing', () => {
@@ -9,7 +9,14 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-test
+test('App is rendering properly', () => {
+  render(<App />);
+});
+
+test('h1 is displaying properly', () => {
+  const { getbyTestId } = render(<App/>);
+  getbyTestId(/mike`'`s world cup sprint/i);
+});
 
 // test('form is rendering properly', () => {
 //   const { getByLabelText } = render(<ContactForm/>);

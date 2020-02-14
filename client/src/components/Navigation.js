@@ -9,7 +9,7 @@ const Navigation = () => {
   };
   return (
     <nav className="navigation">
-      <h1>Womens World Cup</h1>
+      <h1 data-testid='nav-h1'>Womens World Cup</h1>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
