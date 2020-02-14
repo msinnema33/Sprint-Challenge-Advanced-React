@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render, getbyTestId  } from '@testing-library/react';
+import { render, queryByTestId  } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+
 import App from './App';
 
 it('renders without crashing', () => {
@@ -14,9 +16,20 @@ test('App is rendering properly', () => {
 });
 
 test('h1 is displaying properly', () => {
-  const { getbyTestId } = render(<App/>);
-  getbyTestId(/mike`'`s world cup sprint/i);
+  const { queryByTestId, getByTestId} = render(<App/>);
+  queryByTestId('app-h1');
+const h1 = getByTestId('app-h1')
+  expect(h1).not.toHaveClass('header')
 });
+
+// test('h1 is displaying properly', () => {
+//   const { queryByTestId } = render(<App/>);
+//   queryByTestId('does-not-exist');
+
+//   expect(
+//     queryByTestId(document.documentElement, 'does-not-exist'),
+//   ).not.toBeInTheDocument()
+// });
 
 // test('form is rendering properly', () => {
 //   const { getByLabelText } = render(<ContactForm/>);

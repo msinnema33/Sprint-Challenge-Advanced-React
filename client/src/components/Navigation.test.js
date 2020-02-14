@@ -1,20 +1,29 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import Navigation from './Navigation';
 
 
 test('h1 is displaying properly', () => {
-    const { getbyTestId } = render(<Navigation/>);
-    getbyTestId('nav-h1');
+    const { queryByTestId, getByTestId} = render(<Navigation/>);
+    queryByTestId('nav-h1');
 
-    expect(
-        queryByTestId(document.documentElement, 'nav-h1'),
-      ).toBeInTheDocument()
+    const h1 = getByTestId('nav-h1')
+  expect(h1).not.toHaveClass('navigation')
+
+
+    // expect(
+    //     queryByTestId(document.documentElement, 'Womens World Cup'),
+    //   ).toBeInTheDocument()
+
   });
 
+  test('Navigation is rendering properly', () => {
+    render(<Navigation />);
+  });
 
-
-
+// const h1 = getByTestId('nav-h1')
+//   expect(h1).not.toHaveClass('navigation')
 
 
 

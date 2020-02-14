@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Navigation from './components/Navigation';
 // import Display from './components/Display';
-// import Display from './components/Display';
+// import Display2 from './components/Display2';
 
 const playerlist =[
   {
@@ -40,7 +40,7 @@ class App extends React.Component {
                 <header className='header'>
                   <Navigation />
                 </header>
-                  <h1 data-testid='app-h1'>Mike's World Cup Sprint</h1>
+                  <h1 data-testid='app-h1'>Mikes World Cup Sprint</h1>
 
                     <div className='players'>
 
