@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Navigation from './components/Navigation';
 // import Display from './components/Display';
+// import Display from './components/Display';
 
 const playerlist =[
   {
@@ -29,8 +30,6 @@ class App extends React.Component {
               playerlist: e.data
               
             });
-            console.log(playerlist);
-
           })
           .catch(err => console.log(err));
       }
@@ -44,6 +43,8 @@ class App extends React.Component {
                   <h1>Mike's World Cup Sprint</h1>
 
                     <div className='players'>
+
+                      {/* <Display playerlist = {playerlist}/> */}
                       {this.state.playerlist.map(player => (
                         <div className='playercard'>
                           <p className='player' key={player.id}>
@@ -58,7 +59,7 @@ class App extends React.Component {
                         </div>           
                     ))} 
                     </div>
-              </div>
+            </div>
           )
       }
     
