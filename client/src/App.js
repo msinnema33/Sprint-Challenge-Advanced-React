@@ -48,13 +48,13 @@ class App extends React.Component {
                       {this.state.playerlist.map(player => (
                         <div className='playercard'>
                           <p className='player' key={player.id}>
-                            {player.name}
+                            Name: {player.name}
                           </p>
                           <p className='country'>
-                            {player.country}
+                            Country: {player.country}
                           </p>
                           <p className='searchcount'>
-                            {player.searches}
+                          Number of Searches: {player.searches}
                           </p>
                         </div>           
                     ))} 

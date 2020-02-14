@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { render,  } from '@testing-library/react';
 import App from './App';
 
 it('renders without crashing', () => {
@@ -7,3 +8,26 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+test
+
+// test('form is rendering properly', () => {
+//   const { getByLabelText } = render(<ContactForm/>);
+//   getByLabelText(/first name/i);
+//   getByLabelText(/last name/i);
+//   getByLabelText(/email/i);
+//   getByLabelText(/message/i);
+// });
+
+
+// <span data-testid="html-element"><span>Html Element</span></span>
+// <svg data-testid="svg-element"></svg>
+// expect(
+//   queryByTestId(document.documentElement, 'html-element'),
+// ).toBeInTheDocument()
+// expect(
+//   queryByTestId(document.documentElement, 'svg-element'),
+// ).toBeInTheDocument()
+// expect(
+//   queryByTestId(document.documentElement, 'does-not-exist'),
+// ).not.toBeInTheDocument()
