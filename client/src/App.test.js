@@ -22,6 +22,16 @@ const h1 = getByTestId('app-h1')
   expect(h1).not.toHaveClass('header')
 });
 
+describe('arrayContaining', () => {
+  const expected = ['Alex Morgan', 'Marta'];
+  it('matches even if received contains additional elements', () => {
+    expect(['Alex Morgan', 'Marta', 'Megan Rapinoe']).toEqual(expect.arrayContaining(expected));
+  });
+  it('does not match if received does not contain expected elements', () => {
+    expect(['Alex Morgan', 'Bob']).not.toEqual(expect.arrayContaining(expected));
+  });
+});
+
 // test('h1 is displaying properly', () => {
 //   const { queryByTestId } = render(<App/>);
 //   queryByTestId('does-not-exist');
