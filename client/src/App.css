@@ -1,6 +1,6 @@
 
 .playercard {
-  width: 40 px;
+  width: 25%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -53,6 +53,9 @@ img {
 
 .playercard {
   border: 2px solid green;
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation {
@@ -100,15 +103,6 @@ img {
   justify-content: center;
   margin: 50px 0 0;
   width: 100%;
-}
-
-.chart-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: 16px;
 }
 
 .dark-mode {

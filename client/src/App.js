@@ -4,14 +4,14 @@ import Navigation from './components/Navigation';
 // import Display from './components/Display';
 // import Display2 from './components/Display2';
 
-const playerlist =[
-  {
-    name: '',
-    country: '',
-    searches: '',
-    id: ''
-  }
-];
+// const playerlist =[
+//   {
+//     name: '',
+//     country: '',
+//     searches: '',
+//     id: ''
+//   }
+// ];
 
 class App extends React.Component {
     // constructor() {
