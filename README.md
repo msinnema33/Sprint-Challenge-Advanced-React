@@ -22,25 +22,56 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+- [x] Why would you use class component over function components (removing hooks from the question)?
+
+    If given the chance/choice I would only use class components when working with existing code bases that were developed with class components.   
+
+    Functional components are simpler and easier to test. They also have less functionality (basically just the render function, can’t hold state (for props), focused on the UI and not app behavior, cannot use the this keyword).  Pros: simplicity, testability, best practice. 
+
+    Class components need and hold state, make use of lifecycle methods 
+
+- [x] Name three lifecycle methods and their purposes.
+
+    Constructor – sets up our Component (creates any fields (variables starting with this.), initialize the state based on received props.  The only place allowed to change/set state by directly overwriting the this.state field(s).  Everywhere else must use this.setState. 
+
+    Render – used to tell React to return some piece of the DOM.  A required method when using Class Components.  It is called both during the Mounting phase and the Updating Phase.  (the only one that exists across multiple phases). 
+
+    ComponentDidMount – only called one time in the component lifecycle.  calling it signals that the component and all subcomponents have rendered properly.  Use for side-effect causing operations (I.e. AJAX requests).  Event listeners, subscriptions, timers. 
+
+    ComponentDidUpdate – called after render is finished.  only called once per re-render.  Used for side-effect causing operations. 
+
+    ComponentWillUnmount – used to clean up after a component if it takes advantage of timers (setTimeout, setInterval), opens sockets, or performs any operations that we need to close/remove when no longer needed. 
+
+- [x] What is the purpose of a custom hook?
+
+    To be able to reuse the same hook over and over again.  Puts all stateful logic in a single place and allows for DRY code as we don’t have to write that component multiple times.  Also make the core components easier to read and use. 
+
+- [x] Why is it important to test our apps?
+
+    It allows us to minimize the risk of bugs getting into production code.   
+
+        ID bugs faster 
+
+        Reduce the risk of regression 
+
+        Provides a level of trust to the code 
+
+        Helps document the code 
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Run `yarn` to download dependencies.
-- [ ] Run the server using `yarn start` or `node server.js`.
-- [ ] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
-- [ ] Still inside the `client` folder run `yarn start` to run the client application.
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on Github.
+- [x] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [x] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [x] Run `yarn` to download dependencies.
+- [x] Run the server using `yarn start` or `node server.js`.
+- [x] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
+- [x] Still inside the `client` folder run `yarn start` to run the client application.
+- [x] Implement the project on this Branch, **committing progress & changes often.**
+- [x] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
 
@@ -52,12 +83,12 @@ Follow these steps for completing your project:
 
 Your finished project must include all of the following requirements:
 
-- [ ] Class component that fetches data from the server you now have running - the data can be fetched from `http://localhost:5000/api/players`
+- [x] Class component that fetches data from the server you now have running - the data can be fetched from `http://localhost:5000/api/players`
 - [ ] Display the player data you receive from the API
-- [ ] Build a custom hook and use it in your app - this can be a localStorage hook, a fetch hook, a dark mode hook, or any other hook you would like
+- [x] Build a custom hook and use it in your app - this can be a localStorage hook, a fetch hook, a dark mode hook, or any other hook you would like
 - [ ] Write a "reasonable" amount of unit tests for your React components. What does "reasonable amount" mean? That is up to you to decide. Be ready to defend your choice to your TL 👍
 
 ## Stretch Problems
 
-- [ ] Implement another custom hook
+- [x] Implement another custom hook
 - [ ] Use a graphing library to graph the data you received from the API
