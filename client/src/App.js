@@ -3,7 +3,7 @@ import axios from 'axios';
 import Navigation from './components/Navigation';
 // import Display from './components/Display';
 
-const playerList =[
+const playerlist =[
   {
     name: '',
     country: '',
@@ -26,10 +26,10 @@ class App extends React.Component {
           .then(e => {
             console.log('list: ', e);
             this.setState({
-              playerList: e.data
+              playerlist: e.data
               
             });
-            console.log(playerList);
+            console.log(playerlist);
 
           })
           .catch(err => console.log(err));
