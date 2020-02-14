@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import Navigation from './components/Navigation';
+import './App.css';
+
 // import Display from './components/Display';
 // import Display2 from './components/Display2';
 

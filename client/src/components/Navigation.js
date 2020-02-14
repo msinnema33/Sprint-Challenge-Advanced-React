@@ -1,5 +1,6 @@
 import React from 'react';
 import useDarkMode from '../hooks/useDarkMode';
+import '../App.css';
 
 const Navigation = () => {
   const [darkMode, setDarkMode] = useDarkMode(false);
