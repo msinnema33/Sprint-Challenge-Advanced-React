@@ -40,9 +40,9 @@ img {
 /* .root {
   background-color: beige;
 } */
-.container {
+/* .container {
   background-color: beige;
-}
+} */
 
 .header h1 {
   align-items: center;
@@ -111,7 +111,7 @@ img {
 }
 
 .dark-mode {
-  color: rgb(209, 20, 20);
+  color: rgb(224, 216, 96);
   background-color: #313843;
 }
   .dark-mode .navbar {
