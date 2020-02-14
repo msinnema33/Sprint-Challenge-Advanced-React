@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Navigation from './components/Navigation';
-import Display from './components/Display';
-
+// import Display from './components/Display';
 
 const playerList =[
   {
